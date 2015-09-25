@@ -1,0 +1,19 @@
+module FullAdder(
+    input a,
+    input b,
+    input cin,
+    output s,
+    output cout
+    );
+
+
+   wire  s1, c1, c2;
+	
+	
+	xor E10(s1, a, b);
+	and A10(c1, a, b);
+	xor E20(s,s1,cin);
+	and A20(c2,s1,cin);
+	or  O10(cout,c2,c1);
+
+endmodule
